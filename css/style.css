@@ -1,0 +1,42 @@
+:root {
+    --clr-base:rgb(25,146,212);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 300px 1fr;
+
+}
+
+.header {
+
+}
+
+.sidebar {
+    background-color: var(--clr-base);
+    grid-row: 1 / span 2;
+    grid-column-start: 1;
+}
+
+.main-content {
+    background-color: rgb(226,232,240);
+    padding-right: 20px;
+    
+}
+
+button {
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: var(--clr-base)
+}
