@@ -245,3 +245,26 @@ button.new {
 hr.solid {
     border-top: 1px solid #bbb;
 }
+
+.trending-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.trending-card img {
+    border-radius: 30px;
+    width: 50px;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+.trend p:nth-child(2) {
+    color: rgba(150,150,150);
+    padding: 2px;
+}
