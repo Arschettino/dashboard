@@ -150,9 +150,98 @@ button.new {
     font-weight: 600;
 }
 
+.top-labels {
+    display: grid;
+    grid-template: 1fr / 1fr 300px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+.top-labels div {
+    font-size: 18px;
+    font-weight: 500;
+}
 
+.top-labels :nth-child(2) {
+    padding-left: 30px;
+}
 
 .main-content {
     background-color: var(--clr-grey);
-    padding-right: 20px;
+    padding: 25px;
+    padding-top: 0;
+    padding-right: 30px;
+}
+
+.main {
+    display: grid;
+    grid-template: 1fr / 1fr 300px;
+}
+
+.main-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: flex-start;
+    gap: 30px;
+}
+
+.main-content [class$="-label"] {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.projects-label {
+    display: flex;
+}
+
+
+.main-content [class$="-card"] {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 225px;
+    border-radius: 7px;
+    background-color: white;
+    padding: 20px;
+    
+}
+.main-left [class$="-card"] {
+    border-left: 8px solid rgb(240, 181, 44);
+}
+.main-right [class$="-card"] {
+    height: 337px;
+}
+
+
+.main-right {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.main-right .top {
+    padding-bottom: 30px;
+}
+
+.trending-label {
+    padding-bottom: 10px;
+}
+
+
+
+.announcements-label {
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.announcements-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 13px;
+    justify-content: center;
+}
+
+.announcements-card p {
+    padding-top: 5px;
+}
+
+hr.solid {
+    border-top: 1px solid #bbb;
 }
