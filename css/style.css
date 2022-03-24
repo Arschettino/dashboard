@@ -1,5 +1,7 @@
 :root {
     --clr-base:rgb(25,146,212);
+    --clr-grey: rgb(226,232,240);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 *, *::before, *::after {
@@ -11,32 +13,146 @@
 .wrapper {
     display: grid;
     height: 100vh;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 300px 1fr;
 
 }
 
 .header {
-
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px;
+    padding-right: 60px;
+    gap: 10px;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.sidebar {
-    background-color: var(--clr-base);
-    grid-row: 1 / span 2;
-    grid-column-start: 1;
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-items: center;
 }
 
-.main-content {
-    background-color: rgb(226,232,240);
-    padding-right: 20px;
-    
+.top-bar > * {
+    min-width: 30px;
+}
+
+.search-bar {
+    padding-right: 40px;
+    flex: 1;
+    min-width: 400px;
+    margin-left: -15px;
+}
+
+input[type="search"] {
+    border-radius: 15px;
+    border: none;
+    background-color: var(--clr-grey);
+    height: 30px;
+    width: 100%;
+}
+
+.search-icon, .alert-icon, .profile-pic {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic img {
+    width: 50px;
+    border-radius: 30px;
+}
+
+.name {
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.bottom-bar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-pic-large img {
+    width: 80px;
+    border-radius: 100px;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 400px;
+}
+
+.salutation {
+    font-size: 14px;
+}
+
+.greeting > p.name {
+    font-size: 22px;
 }
 
 button {
+    margin-top: 20px;
     padding: 10px 30px;
     border-radius: 20px;
     border: none;
     color: white;
     font-weight: bold;
     background-color: var(--clr-base)
+}
+
+button.new {
+    margin-left: auto;
+}
+
+.sidebar {
+    background-color: var(--clr-base);
+    grid-row: 1 / span 2;
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.top-section > img {
+    width: 200px;
+
+}
+
+.middle-section, .bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.middle-section > div, .bottom-section > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 30px;
+}
+
+.middle-section span, .bottom-section span {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+.main-content {
+    background-color: var(--clr-grey);
+    padding-right: 20px;
 }
